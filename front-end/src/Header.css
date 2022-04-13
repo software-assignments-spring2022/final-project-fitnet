@@ -1,0 +1,32 @@
+.header {  
+    top: 0; 
+    position: fixed; 
+    width: 100%;   
+    height: 80px; 
+    background: white;
+    text-align: right;
+    color: var(--main-accent-color);
+    border-style: none none solid none;
+    z-index: 99; 
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header a { 
+    font-weight: 600; 
+    font-size: 22pt; 
+    margin-right: 20px; 
+}
+
+.header a:hover { 
+    color: var(--light-accent-hover);  
+} 
+
+.header svg {
+    margin-left: 20px;
+    margin-top: 5px;
+    height: 100%;
+    width: auto;
+    align-items: left; 
+}

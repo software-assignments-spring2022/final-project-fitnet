@@ -1,0 +1,9 @@
+.Playlists { 
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+
+#invalidURL { 
+    margin-top: -10px; 
+}

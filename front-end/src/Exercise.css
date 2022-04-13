@@ -1,0 +1,29 @@
+.Exercise {
+    width: 200px;
+    display: flex; 
+    align-items: center;
+    flex-direction: row;
+}
+.ExerciseName {
+    margin-right: 5px;
+    width: 80px;
+    font-size: 12px;
+    flex: 2 100px;
+}
+.ExerciseSets {
+    margin-right: 5px;
+    width: 15px;
+    font-size: 12px;
+    flex: 1;
+}
+.ExerciseReps {
+    margin-right: 5px;
+    width: 15px;
+    font-size: 12px;
+    flex: 1;
+}
+.ExerciseSubmit {
+    width: 40px;
+    font-size: 12px;
+    flex: 1;
+}

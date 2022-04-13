@@ -1,0 +1,25 @@
+.MyProfile { 
+    align-items: center;
+    margin-bottom: 20px; 
+} 
+
+#MyProfile-info { 
+    border-radius: 20px; 
+    margin-bottom: 125px; 
+    padding: 30px; 
+    animation: fadeIn 1s; 
+}
+
+.UserProfile-title #myname { 
+    margin-top: 20px; 
+    font-size: 25px;
+}
+
+.UserProfile-title #myusername{ 
+    font-size: 20px; 
+}
+
+#mpbio {
+    width: 300px; 
+    overflow-wrap: break-word; 
+}

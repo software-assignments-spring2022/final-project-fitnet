@@ -1,0 +1,9 @@
+.SignUp { 
+    align-items: center;
+}
+
+#SignUp-info { 
+    padding:30px; 
+    padding-top: 10px; 
+    border-radius: 20px; 
+}

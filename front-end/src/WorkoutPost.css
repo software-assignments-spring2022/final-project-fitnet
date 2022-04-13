@@ -1,0 +1,20 @@
+#WorkoutPost {  
+    justify-content: center; 
+}
+
+.Workout-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.MusicIcon { 
+    padding: 5px;  
+}
+
+.MusicIcon a { 
+    color: var(--main-accent-color)
+}
+
+
+

@@ -1,0 +1,73 @@
+.Settings { 
+    align-items: center;
+    margin-bottom: 100px; 
+}
+
+#settingspic { 
+  width: 100px;
+  height: 100px; 
+  border-radius: 50%; 
+  margin-bottom: 10px; 
+  margin-top: 10px; 
+}
+
+#Settings-top { 
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+}
+
+#Settings-top b { 
+  margin-bottom: 30px; 
+}
+
+.Settings input {   
+    border-radius: 5px; 
+    border-style: solid; 
+    border-width: 1px;
+    border-color: var(--main-border-color); 
+    padding: 5px; 
+    font-size: 12pt; 
+}
+
+#Settings-info { 
+    animation: fadeIn 1s; 
+    border-radius: 20px; 
+}
+
+.Settings-form :first-child{ 
+    margin-top: 0px; 
+} 
+
+.bottom-links { 
+    margin-top: -10px;  
+    margin-bottom:20px;  
+    display:flex; 
+    flex-direction: row;
+}
+
+  .bottom-links a { 
+    margin: 10px; 
+    padding: 10px; 
+    font-size: 12pt; 
+  }
+
+  #signout-button a { 
+    color: rgb(109, 109, 109); 
+  }
+
+  #signout-button a:hover { 
+    border-color: rgb(109, 109, 109) ; 
+    background-color: rgb(109, 109, 109); 
+    color: white; 
+  }
+
+  #deleteaccount-button a{ 
+    color: rgb(196, 0, 0); 
+  }
+
+  #deleteaccount-button a:hover { 
+    border-color: rgb(196, 0, 0);
+    background-color:rgb(196, 0, 0);
+    color: white;
+  }

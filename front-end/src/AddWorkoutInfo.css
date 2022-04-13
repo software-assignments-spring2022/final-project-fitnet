@@ -1,0 +1,31 @@
+.AddWorkoutInfo {
+    width: 200px;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 100px; */
+}
+.AddWorkoutInfo-header input, 
+/* {
+    width: 200px;
+    margin: 5px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.AddWorkoutInfo-header button,
+.AddWorkoutInfo-header textarea { /* WHY ARE THESE NOT 200PX??? */
+    width: 200px;
+    margin: 5px auto;
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#awiSaved { 
+    margin-top: 10px;  
+    margin-bottom: -5px; 
+}

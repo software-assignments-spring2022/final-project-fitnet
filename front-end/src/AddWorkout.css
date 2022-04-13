@@ -1,0 +1,46 @@
+.AddWorkout {
+    margin-top: 100px;
+    margin-bottom: 125px; 
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+.backlink {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 212px;
+}
+
+.backlink a { /* needs 'a' here? */
+    /* margin: 20px; */
+    color: var(--main-accent-color); 
+}
+
+.TableHeader {
+    margin: 20px;
+    margin-bottom: 10px;
+    width: 200px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+}
+.TableHeader :first-child {
+    width: 95px;
+}
+.TableHeader > * {
+    width: 35px;
+}
+.AddExercise {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px;
+    border: none;
+    color: rgb(76, 78, 228);
+    background-color: white;
+}

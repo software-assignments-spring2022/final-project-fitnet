@@ -1,0 +1,9 @@
+.Login { 
+    align-items: center;
+}
+
+#Login-info { 
+    padding: 30px; 
+    padding-top: 10px; 
+    border-radius: 20px;
+}

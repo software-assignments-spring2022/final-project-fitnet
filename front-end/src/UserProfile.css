@@ -1,0 +1,57 @@
+#back-link { 
+    margin-left: -320px;
+    margin-bottom: -20px;  
+    margin-top: 10px; 
+}
+
+.UserProfile { 
+    align-items: center;
+    margin-bottom: 20px; 
+} 
+
+#UserProfile-info { 
+    border-radius:20px; 
+    padding: 30px; 
+    margin-bottom: 125px;
+    animation: fadeIn 1s; 
+}
+
+.UserProfile-pic { 
+    border-radius: 50%; 
+    width: 175px; 
+    height: 175px; 
+    object-fit: cover; 
+    transition: 1s;
+} 
+
+.UserProfile-pic:hover { 
+    width: 300px; 
+    height: 300px; 
+    transition: 1s; 
+}
+
+.UserProfile-title { 
+    display: flex; 
+    flex-direction: column;
+}
+
+.UserProfile-title p { 
+    margin: 0; 
+    padding: 0; 
+    font-weight: 600; 
+}
+
+.UserProfile-title #name { 
+    margin-top: 20px; 
+    font-size: 25px;
+}
+
+.UserProfile-title #username { 
+    font-size: 20px; 
+}
+
+#upbio { 
+    width: 300px; 
+    overflow-wrap: break-word; 
+}
+

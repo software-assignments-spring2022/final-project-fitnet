@@ -1,19 +1,32 @@
-# Project Repository
+# FitNet 
 
-This repository will be used for team projects.
+## What and Why?
+In an era dictated by a global epidemic and the growing popularity of social media, fitness and social connection are becoming increasingly vital aspects of our lifestyles. Unfortunately, the vast majority of individuals who engage in fitness often find themselves unable to effectively track and engage with their health journey, in addition to sharing their progress and achievements with others. **As a social media platform dedicated to tracking fitness, FitNet’s goal is to bridge this existing gap between fitness and social connection, creating a safe space for everyone to document and share their health journey.**
 
-Several sets of instructions are included in this repository. They should each be treated as separate assignments with their own due dates and sets of requirements.
+## For whom? 
+FitNet is a fitness tracker application that is viable for everybody, ranging from the average runner to fitness enthusiasts who seek an intense workout at the gym. As users continue to use the application and input new workouts, they will receive progress updates in their pursuit towards a healthier lifestyle. FitNet is able to be implemented in any setting or lift stage. The user interface and software is designed intuitively, such that its features are easy to navigate for anyone, regardless of tech literacy or familiarity with exercise programs. Users can be middle-aged parents looking to improve their health for comfort reasons, young people getting into fitness as a hobby, or office workers in their mid-thirties trying to introduce some extra movement into their lives. 
 
-1. See the [App Map & Wireframes](instructions-0a-app-map-wireframes.md) and [Prototyping](./instructions-0b-prototyping.md) instructions for the requirements of the initial user experience design of the app.
+## Core Team Members 
+- [Joseph Kim](../../../../jk6236)
+- [Colin McRae](../../../../crm584) 
+- [Sydney Jo](../../../../selftimersyd)
+- [Vanessa Chen](../../../../vc1530)
+- [Issac Singer](../../../../iwillseeyouinabits)
+- [Yousuf Kidwai](../../../../yousufkidwai) 
 
-1. Delete the contents of this file and replace with the contents of a proper README.md, as described in the [project setup instructions](./instructions-0c-project-setup.md)
+## Short History 
+Social media has long been the source of many of our fitness inspirations. According to a recent [study](https://www.forbes.com/sites/petersuciu/2019/11/06/is-social-media-the-best-place-to-get-fitness-and-health-advice/?sh=48407e158614), 44% of Americans turn to Facebook, Twitter, Instagram, and YouTube for health, fitness, and diet advice. However, in conjunction with the misinformation and false advertising often showcased on such platforms, viewing fitness-related content on Facebook or Twitter could result in engaging in a toxic environment that is not productive and possibly damaging to one’s health journey. 
 
-1. See the [Sprint Planning instructions](instructions-0d-sprint-planning.md) for the requirements of Sprint Planning for each Sprint.
+FitNet was inspired by this lack of existing fitness social media platforms. By only showing users fitness-related content, FitNet ensures a welcoming environment that encourages social connection and motivation from watching others’ health journeys take shape. Additionally, users are able to document their own progress to see for oneself or share with others, keeping track of individual workouts or curating workout playlists to better personalize their fitness experience. 
 
-1. See the [Front-End Development instructions](./instructions-1-front-end.md) for the requirements of the initial Front-End Development.
+## Building and testing 
+To test this project: 
+1. Clone the project repository: `git clone <url` 
+2. Go into the front end directory: `cd final-project-fitnet/front-end` 
+3. Run `npm install` 
+4. Run `npm start` 
 
-1. See the [Back-End Development instructions](./instructions-2-back-end.md) for the requirements of the initial Back-End Development.
+The app should start in your default web browser. 
 
-1. See the [Database Integration instructions](./instructions-3-database.md) for the requirements of integrating a database into the back-end.
-
-1. See the [Deployment instructions](./instructions-4-deployment.md) for the requirements of deploying an app.
+## For Potential Contributors 
+If you would like to correct any bugs in our code or add new functionalities feel free to do so by following [these](./CONTRIBUTING.md) instructions.  
