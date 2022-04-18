@@ -10,9 +10,6 @@ jobs:
         # auth:
         #   username: mydockerhub-user
         #   password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    environment: 
-      DB_CONNECTION_STRING: mongodb+srv://tester:test1234@fitnet.80qee.mongodb.net/fitnet?retryWrites=true&w=majority
-      JWT_SECRET: dream.team 
     steps:
       - checkout
       - run: echo "this is the build and test express.js job"
