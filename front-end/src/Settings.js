@@ -9,6 +9,8 @@ import blankpic from "./images/blank_profile.jpg"
 
 const Settings = () => {
 
+    let changes = 0
+
     const jwtToken = localStorage.getItem("token") 
 
     const [isLoggedIn, setIsLoggedIn] = useState(jwtToken && true) 
@@ -19,7 +21,6 @@ const Settings = () => {
     const [bio, setBio] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [profile_pic, setProfile_pic] = useState(null) 
     const [selectedFile, setSelectedFile] = useState(null)
     
     useEffect(() => { 
@@ -33,15 +34,14 @@ const Settings = () => {
             setBio(res.data.user.bio) 
             setEmail(res.data.user.email) 
             setPassword(res.data.user.password) 
-            if (res.data.user.profile_pic) 
-                setProfile_pic(res.data.user.profile_pic)
+            setSelectedFile(res.data.user.profile_pic) 
         })
         .catch(err => { 
             console.error(err) 
             console.log("Invalid token") 
             setIsLoggedIn(false) 
         })
-    }, [])
+    }, [changes])
 
     const [nameError, setNameError] = useState("") 
     const [usernameError, setUsernameError] = useState("") 
@@ -97,7 +97,7 @@ const Settings = () => {
             formData.append("bio", bio);
             formData.append("email", email);
             formData.append("password", password);
-            formData.append("image", selectedFile); // does the image need a state variable
+            formData.append("image", selectedFile); 
             axios({
                 method: "post",
                 url: `${process.env.REACT_APP_SERVER_HOSTNAME}/save-changes`,
@@ -110,6 +110,7 @@ const Settings = () => {
             })
             .then((response) => { 
                 console.log("saving changes in settings succeeded")
+                changes ++
                 setNameError("") 
                 setUsernameError("") 
                 setEmailError("")
@@ -119,19 +120,14 @@ const Settings = () => {
         } 
       }
 
-      // do i need this 
       const handleFileSelect = (event) => {
         setSelectedFile(event.target.files[0])
       }
-
-      const handleSignOut = e => { 
-        console.log(`attemping to log out user ${username}`)
-        localStorage.removeItem("token")
-        console.log(`user ${username} has been logged out`)
-      }
       
       const handleDelete = e => {
+        
         console.log("attempting to delete" + username + " from the database")
+
         axios
         .post(`${process.env.REACT_APP_SERVER_HOSTNAME}/users/delete` , {
             username: username
@@ -145,15 +141,6 @@ const Settings = () => {
             })
         }
 
-        const arrayBufferToBase64 = buffer => {
-            var binary = '';
-            var bytes = new Uint8Array( buffer );
-            var len = bytes.byteLength;
-            for (var i = 0; i < len; i++) {
-                binary += String.fromCharCode( bytes[ i ] );
-            }
-            return window.btoa( binary );
-        }
     
     if (isLoggedIn) 
         return (
@@ -165,11 +152,10 @@ const Settings = () => {
                 <body id = "Settings-info" className="Post-box"> 
                     <div id = "Settings-top"> 
                         <img 
-                            id = "settingspic"
-                            src={profile_pic ? `data:image/png;base64,${arrayBufferToBase64(profile_pic.data.data)}`: blankpic}
-                            alt = "me!"
+                            id = "settingspic" 
+                            src = {selectedFile}
+                            alt = "profile pic"
                         /> 
-                        {/* added to this */}
                         <input 
                             type="file" 
                             name="image" 
@@ -182,7 +168,7 @@ const Settings = () => {
                         />
                     </div>
                     <form onSubmit = {handleSubmit}>
-                        <label htmlFor="name">Name </label>
+                        <label for="name">Name </label>
                         <input 
                             type= "text" 
                             name = "name" 
@@ -194,7 +180,7 @@ const Settings = () => {
                             }}
                         />
                         {nameError ? <p className="error">{nameError}</p> : ""}
-                        <label htmlFor="username">Username </label>
+                        <label for="username">Username </label>
                         <input 
                             type= "text" 
                             name = "username" 
@@ -206,7 +192,7 @@ const Settings = () => {
                             }}
                         />
                         {usernameError ? <p className="error">{usernameError}</p> : ""}
-                        <label htmlFor="email">Email </label>
+                        <label for="email">Email </label>
                         <input 
                             type= "text" 
                             name = "email" 
@@ -218,7 +204,7 @@ const Settings = () => {
                             }}
                         />
                         {emailError ? <p className="error">{emailError}</p> : ""}
-                        <label htmlFor="password">Password </label>
+                        <label for="password">Password </label>
                         <input 
                             type= "password" 
                             name = "password" 
@@ -229,10 +215,10 @@ const Settings = () => {
                             }}
                         />
                         {passwordError ? <p className="error">{passwordError}</p> : ""}
-                        <label htmlFor="bio">Bio </label>
+                        <label for="bio">Bio </label>
                         <textarea 
                             id = "settingsbio"
-                            maxLength = "432"
+                            maxlength = "432"
                             type= "text" 
                             value = {bio} 
                             placeholder = "Enter a short bio"
@@ -248,7 +234,7 @@ const Settings = () => {
                 </body>
                 {savedMessage ? <p className = "saved">{savedMessage}</p> : ""}
                 <div className = "bottom-links"> 
-                    <div id = "signout-button" className = "blue-button" onClick = {handleSignOut} > 
+                    <div id = "signout-button" className = "blue-button"> 
                         <a className = "User-link" href="/">Sign Out</a> 
                     </div>
                     <div id = "deleteaccount-button" className = "blue-button" onClick={handleDelete}> 
