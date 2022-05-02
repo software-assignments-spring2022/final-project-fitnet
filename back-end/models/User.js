@@ -2,14 +2,8 @@ const { interfaces } = require('mocha')
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-//const { workoutSchema } = require('./Workout')
-
 const userSchema = new Schema(
   {
-    // id: { 
-    //   type: mongoose.Schema.Types.ObjectId, 
-    //   required: true, 
-    // },
     name: {
       type: String,
       required: true,

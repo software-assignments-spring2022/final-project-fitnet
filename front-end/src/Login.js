@@ -104,7 +104,6 @@ function Login() {
                             }}
                         />
                         {passwordError ? <p className = "error">{passwordError}</p> : ""}
-                        <h4><a className = "User-link" href ="/ForgotPassword">Forgot your password?</a></h4>
                         <div className = "submit-button" >
                             <button>Login</button>
                         </div> 

@@ -24,10 +24,6 @@ const exerciseSchema = new Schema(
 )
 const workoutSchema = new Schema (
     {
-        // id: { 
-        //     type: mongoose.Schema.Types.ObjectId, 
-        //     required: true, 
-        // },
         workout_name: {
             type: String,
             required: true,

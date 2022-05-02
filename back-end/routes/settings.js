@@ -1,7 +1,6 @@
 const express = require("express")
 const router = express.Router()
 const multer = require("multer") 
-const allUsers = require("../mock_users.json") 
 const path = require("path")
 const fs = require('fs')
 

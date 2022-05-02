@@ -14,7 +14,6 @@ import Playlists from './Playlists.js';
 import Settings from './Settings.js';
 import SignUp from './SignUp';
 import Login from './Login';
-import ForgotPassword from './ForgotPassword'
 
 const App = () => {
   return (
@@ -23,7 +22,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/ForgotPassword" element={<ForgotPassword />} />
         <Route path="/NewPost" element={<NewPost/>} />
         <Route path="/addExercise" element={<AddExercise />} />
         <Route path="/addWorkout" element={<AddWorkout />} />

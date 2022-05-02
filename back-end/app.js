@@ -24,10 +24,6 @@ mongoose
   .then((data) => console.log(`Connected to MongoDB`))
   .catch((err) => console.error(`Failed to connect to MongoDB: ${err}`));
 
-const allWorkouts = require('./mock_workouts.json');
-const allPosts = require('./mock_posts.json');
-const allUsers = require('./mock_users.json');
-
 const { Post } = require('./models/Post');
 const { User } = require('./models/User');
 const { Workout, Exercise } = require('./models/Workout');
