@@ -9,7 +9,7 @@ const should = chai.should();
 
 // chai.use(chaiHttp);
 
-describe('/GET/:username', () => {
+describe('/GET/user/:username', () => {
   it('it should GET a user by the given username', (done) => {
     // const user = allUsers[uid]
     const username = 'mochaTest';

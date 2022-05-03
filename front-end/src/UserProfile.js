@@ -17,7 +17,7 @@ const UserProfile = () => {
     useEffect (() => { 
         console.log("fetching data for user " + params.username) 
         axios 
-        .get(`${process.env.REACT_APP_SERVER_HOSTNAME}/` + params.username)
+        .get(`${process.env.REACT_APP_SERVER_HOSTNAME}/user/${params.username}`)
         .then (res => { 
             setUser(res.data.user)
             console.log("successful retrieval of user " + params.username + " from database")
